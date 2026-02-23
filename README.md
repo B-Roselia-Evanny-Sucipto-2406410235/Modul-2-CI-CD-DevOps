@@ -1,3 +1,5 @@
+Link: https://eshop-roselia.koyeb.app/
+
 ## Modul 2
 Selama pengerjaan modul, saya memperbaiki beberapa masalah kualitas kode yang terdeteksi oleh SonarCloud. Isu pertama adalah field injection. SonarCloud menemukan bahwa ProductController menggunakan @Autowired langsung pada field. Maka, saya melakukan refactoring menjadi constructor injection dengan mendeklarasikan service sebagai `private final` dan membuat konstruktor publik. Hal ini meningkatkan kemudahan testing dan memastikan class tidak pernah dalam keadaan tidak utuh saat di-instantiate. Kemudian, saya juga memperbaiki dependensi yang tidak terorganisir pada file `build.gradle.kts`. Saya memperbaikinya dengan mengelompokkan dependensi berdasarkan tujuannya, seperti dependensi aplikasi, testing, dll. Hal ini meningkatkan maintainability script build dan memudahkannya untuk dibaca.
 
